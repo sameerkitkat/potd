@@ -1,0 +1,18 @@
+def climbing_stairs(n):
+	if n == 1:
+		return 1
+	first = 1
+	second = 2
+	for i in range(3,n+1):
+		third = first+second
+		first = second
+		second = third
+	return second
+
+
+def main():
+	n = 2
+	print(climbing_stairs(n))
+
+if __name__ == '__main__':
+	main()
