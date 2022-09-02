@@ -12,7 +12,7 @@ def first_unique_character(s):
 
 
 def main():
-	s = "leetcode"
+	s = "love leetcode"
 	print(first_unique_character(s))
 
 if __name__ == '__main__':
