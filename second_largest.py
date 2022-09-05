@@ -1,13 +1,14 @@
 def second_largest(arr):
 	first = second = float('-inf')
 
-	for i in range(0,len(arr)):
-		if arr[i] > first:
+	for i in arr:
+		if i > first:
 			second = first
-			first = arr[i]
-		elif arr[i] > second and arr[i] != first:
-			second = arr[i]
+			first = i
+		elif i > second and second != first:
+			second = i
 	return second
+
 
 
 
