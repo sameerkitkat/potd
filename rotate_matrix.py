@@ -1,11 +1,13 @@
 def rotate_matrix(matrix):
 	rows = len(matrix)
 	columns = len(matrix[0])
-	ans = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+
+	ans = [[0 for c in range(columns)]for r in range(rows)]
 	for i in range(rows):
 		for j in range(columns):
 			ans[i][j] = matrix[j][i]
 
+	print(ans)
 	for k in ans:
 		reverse_arr(k)
 
