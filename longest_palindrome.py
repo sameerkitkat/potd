@@ -4,9 +4,9 @@ def longest_palindrome(s):
 		temp = helper(s,i,i)
 		if len(temp) > len(res):
 			res = temp
-		'''temp = helper(s,i,i+1)
+		temp = helper(s,i,i+1)
 		if len(temp) > len(res):
-			res = temp'''
+			res = temp
 	return res
 
 
