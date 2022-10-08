@@ -25,6 +25,10 @@ class LinkedList:
 
 	def delete_nth_from_end(self, head, n):
 		total = self.get_count(head)
+		
+		if n == 0:
+			return head
+
 		if n == total:
 			head = head.next
 			return head 
@@ -37,8 +41,31 @@ class LinkedList:
 			temp = temp.next
 			c+=1
 		temp.next = temp.next.next
-		return head 
+		return head
 
+	'''def delete_nth_from_end(self, head, n):
+		fast = head
+		slow = head
+		total = self.get_count(head)
+		if n == 0:
+			return head
+
+		if n == total:
+			head = head.next
+			return head 
+
+		count = 0
+		while count != n:
+			fast = fast.next
+			count += 1
+
+		while fast.next:
+			fast = fast.next
+			slow = slow.next
+
+		slow.next = slow.next.next
+
+		return head'''
 
 
 def main():
@@ -56,7 +83,7 @@ def main():
 	node4.next = node5
 
 	linkedlist.print_list(node1)
-	head = linkedlist.delete_nth_from_end(node1, 1)
+	head = linkedlist.delete_nth_from_end(node1, 5)
 	linkedlist.print_list(head)
 
 
