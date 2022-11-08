@@ -21,7 +21,6 @@ def three_sum_closest(nums,target):
 	return target - diff
 
 
-#-4,-1,1,2
 def main():
 	nums = [-1,2,1,-4]
 	target = 1
